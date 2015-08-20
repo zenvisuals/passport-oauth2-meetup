@@ -1,7 +1,7 @@
 {
   "name": "passport-oauth2-meetup",
-  "version": "1.0.1",
-  "description": "Passport OAuth2 Strategy for Meetup",
+  "version": "1.0.2",
+  "description": "Passport OAuth2 Strategy for Meetup ",
   "main": "./lib",
   "scripts": {
     "test": "npm test"
@@ -12,16 +12,13 @@
   },
   "keywords": [
     "passport",
-    "oauth2",
-    "meetup"
+    "meetup",
+    "oauth2"
   ],
   "author": "Chee Zhiquan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zenvisuals/passport-oauth2-meetup/issues"
   },
-  "homepage": "https://github.com/zenvisuals/passport-oauth2-meetup",
-  "dependencies": {
-    "passport-oauth2": "^1.1.2"
-  }
+  "homepage": "https://github.com/zenvisuals/passport-oauth2-meetup"
 }
