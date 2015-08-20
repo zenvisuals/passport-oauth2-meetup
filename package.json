@@ -1,6 +1,6 @@
 {
   "name": "passport-oauth2-meetup",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Passport OAuth2 Strategy for Meetup ",
   "main": "./lib",
   "scripts": {
