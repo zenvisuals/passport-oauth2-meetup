@@ -53,4 +53,4 @@ authenticate requests.
 
 ## License
 
-[The MIT License](http://opensource.org/licenses/MIT)
+[The ISC License](http://opensource.org/licenses/ISC)
