@@ -13,7 +13,7 @@ Passport OAuth2 Meetup authentication strategy for [Passport](https://github.com
 This authentication strategy authenticates users using their meetup account. Users have
 to be logged on to Meetup.com to complete the process. Meetup API does not supply username
 or email for its user profile. This strategy has been tweaked to include auto generation
-of username. The username will be identified as "meetup_<meetupID>". The auto generation
+of username. The username will be identified as `meetup_<meetupID>`. The auto generation
 can be disabled. If there is no username generated, there will be nothing to identify the user
 unless the user has already logged on. Passport.connect function has to be modified to
 continue the process even when there are no username or email provided.
