@@ -11,18 +11,18 @@
 7 silly cache add   rawSpec: '.',
 7 silly cache add   spec: '/Users/zhiquan/Documents/passport-oauth2-meetup',
 7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /Users/zhiquan/.npm/passport-oauth2-meetup/1.0.4/package.tgz not in flight; packing
-9 verbose tar pack [ '/Users/zhiquan/.npm/passport-oauth2-meetup/1.0.4/package.tgz',
+8 verbose addLocalDirectory /Users/zhiquan/.npm/passport-oauth2-meetup/1.0.7/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/zhiquan/.npm/passport-oauth2-meetup/1.0.7/package.tgz',
 9 verbose tar pack   '/Users/zhiquan/Documents/passport-oauth2-meetup' ]
-10 verbose tarball /Users/zhiquan/.npm/passport-oauth2-meetup/1.0.4/package.tgz
+10 verbose tarball /Users/zhiquan/.npm/passport-oauth2-meetup/1.0.7/package.tgz
 11 verbose folder /Users/zhiquan/Documents/passport-oauth2-meetup
-12 info prepublish passport-oauth2-meetup@1.0.4
-13 verbose addLocalTarball adding from inside cache /Users/zhiquan/.npm/passport-oauth2-meetup/1.0.4/package.tgz
-14 silly cache afterAdd passport-oauth2-meetup@1.0.4
-15 verbose afterAdd /Users/zhiquan/.npm/passport-oauth2-meetup/1.0.4/package/package.json not in flight; writing
-16 verbose afterAdd /Users/zhiquan/.npm/passport-oauth2-meetup/1.0.4/package/package.json written
+12 info prepublish passport-oauth2-meetup@1.0.7
+13 verbose addLocalTarball adding from inside cache /Users/zhiquan/.npm/passport-oauth2-meetup/1.0.7/package.tgz
+14 silly cache afterAdd passport-oauth2-meetup@1.0.7
+15 verbose afterAdd /Users/zhiquan/.npm/passport-oauth2-meetup/1.0.7/package/package.json not in flight; writing
+16 verbose afterAdd /Users/zhiquan/.npm/passport-oauth2-meetup/1.0.7/package/package.json written
 17 silly publish { name: 'passport-oauth2-meetup',
-17 silly publish   version: '1.0.4',
+17 silly publish   version: '1.0.7',
 17 silly publish   description: 'Passport OAuth2 Strategy for Meetup ',
 17 silly publish   main: './lib',
 17 silly publish   scripts: { test: 'npm test' },
@@ -31,15 +31,15 @@
 17 silly publish      url: 'https://github.com/zenvisuals/passport-oauth2-meetup.git' },
 17 silly publish   keywords: [ 'passport', 'meetup', 'oauth2' ],
 17 silly publish   author: { name: 'Chee Zhiquan' },
-17 silly publish   license: 'MIT',
+17 silly publish   license: 'ISC',
 17 silly publish   dependencies: { 'passport-oauth2': '^1.1.2' },
 17 silly publish   bugs: { url: 'https://github.com/zenvisuals/passport-oauth2-meetup/issues' },
 17 silly publish   homepage: 'https://github.com/zenvisuals/passport-oauth2-meetup',
-17 silly publish   readme: '# passport-oauth2-meetup\nPassport OAuth2 Strategy for Meetup API\n',
+17 silly publish   readme: '# Passport-OAuth2-Meetup\n\nPassport OAuth2 Meetup authentication strategy for [Passport](https://github.com/jaredhanson/passport).\n\n## Install\n\n    $ npm install passport-oauth2-meetup\n\n## Usage of OAuth2-Meetup\n\n#### Configure Strategy\n\nThis authentication strategy authenticates users using their meetup account. Users have\nto be logged on to Meetup.com to complete the process. Meetup API does not supply username\nor email for its user profile. This strategy has been tweaked to include auto generation\nof username. The username will be identified as "meetup_<meetupID>". The auto generation\ncan be disabled. If there is no username generated, there will be nothing to identify the user\nunless the user has already logged on. Passport.connect function has to be modified to\ncontinue the process even when there are no username or email provided.\n\n    // If neither an email or a username was available in the profile, we don\'t\n    // have a way of identifying the user in the future. Throw an error and let\n    // whoever\'s next in the line take care of it.\n    if (!user.username && !user.email) {\n      console.log("no email no username");\n      //meetup does not provide email and username, however user should be logged on to link his meetup account\n      if(!req.user || provider != \'meetup\') return next(new Error(\'Neither a username nor email was available\'));\n    }\n\nIf username is auto generated, the process should carry on smoothly.\n\n    var MeetupOAuth2Strategy = require(\'passport-oauth2-meetup\').Strategy;\n\n    passport.use(new MeetupOAuth2Strategy({\n      clientID: MEETUP_KEY,\n      clientSecret: MEETUP_SECRET,\n      callbackURL: "http://127.0.0.1:3000/auth/meetup/callback",\n      autoGenerateUsername: true\n    }, function(accessToken, refreshToken, profile, done) {\n        return done(null, profile);\n    }));\n\n#### Authenticate Requests\n\nUse `passport.authenticate()`, specifying the `\'meetup\'` strategy, to\nauthenticate requests.  \n\n    app.get(\'/auth/meetup\',\n      passport.authenticate(\'meetup\', { session: false }),\n      function(req, res) {\n        res.json(req.user);\n      });\n\n## License\n\n[The ISC License](http://opensource.org/licenses/ISC)\n',
 17 silly publish   readmeFilename: 'README.md',
-17 silly publish   gitHead: 'ea8482abe261b31e098af2bb6c326fc952499a6a',
-17 silly publish   _id: 'passport-oauth2-meetup@1.0.4',
-17 silly publish   _shasum: '205aed1d8859e5f8983a6b34f311ffd0f903aa36',
+17 silly publish   gitHead: '9940acd265c5a1f35c3f4826d1512d0f09a5ac4a',
+17 silly publish   _id: 'passport-oauth2-meetup@1.0.7',
+17 silly publish   _shasum: 'ca6aa452ff7dfadd2ca5fc75797989a1da5877fe',
 17 silly publish   _from: '.' }
 18 verbose getPublishConfig undefined
 19 silly mapToRegistry name passport-oauth2-meetup
@@ -47,28 +47,28 @@
 21 silly mapToRegistry registry https://registry.npmjs.org/
 22 silly mapToRegistry uri https://registry.npmjs.org/passport-oauth2-meetup
 23 verbose publish registryBase https://registry.npmjs.org/
-24 silly publish uploading /Users/zhiquan/.npm/passport-oauth2-meetup/1.0.4/package.tgz
+24 silly publish uploading /Users/zhiquan/.npm/passport-oauth2-meetup/1.0.7/package.tgz
 25 verbose request uri https://registry.npmjs.org/passport-oauth2-meetup
 26 verbose request sending authorization for write operation
-27 info attempt registry request try #1 at 6:05:53 PM
+27 info attempt registry request try #1 at 9:26:43 PM
 28 verbose request using bearer token for auth
-29 verbose request id 4e4e51ff6ef4bb54
+29 verbose request id 14605f5824a80ef0
 30 http request PUT https://registry.npmjs.org/passport-oauth2-meetup
 31 http 403 https://registry.npmjs.org/passport-oauth2-meetup
 32 verbose headers { 'content-type': 'application/json',
 32 verbose headers   'cache-control': 'max-age=60',
 32 verbose headers   'content-length': '95',
 32 verbose headers   'accept-ranges': 'bytes',
-32 verbose headers   date: 'Thu, 20 Aug 2015 10:05:55 GMT',
+32 verbose headers   date: 'Fri, 21 Aug 2015 13:26:44 GMT',
 32 verbose headers   via: '1.1 varnish',
 32 verbose headers   connection: 'keep-alive',
 32 verbose headers   'x-served-by': 'cache-hkg6826-HKG',
 32 verbose headers   'x-cache': 'MISS',
 32 verbose headers   'x-cache-hits': '0',
-32 verbose headers   'x-timer': 'S1440065153.751548,VS0,VE1752' }
+32 verbose headers   'x-timer': 'S1440163604.157054,VS0,VE396' }
 33 verbose request invalidating /Users/zhiquan/.npm/registry.npmjs.org/passport-oauth2-meetup on PUT
 34 error publish Failed PUT 403
-35 verbose stack Error: "You cannot publish over the previously published version 1.0.4." : passport-oauth2-meetup
+35 verbose stack Error: "You cannot publish over the previously published version 1.0.7." : passport-oauth2-meetup
 35 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:247:14)
 35 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
 35 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:368:22)
@@ -87,7 +87,7 @@
 41 error node v0.12.4
 42 error npm  v2.10.1
 43 error code E403
-44 error "You cannot publish over the previously published version 1.0.4." : passport-oauth2-meetup
+44 error "You cannot publish over the previously published version 1.0.7." : passport-oauth2-meetup
 45 error If you need help, you may report this error at:
 45 error     <https://github.com/npm/npm/issues>
 46 verbose exit [ 1, true ]
