@@ -22,8 +22,6 @@ continue the process even when there are no username or email provided.
     // have a way of identifying the user in the future. Throw an error and let
     // whoever's next in the line take care of it.
     if (!user.username && !user.email) {
-      console.log("no email no username");
-      //meetup does not provide email and username, however user should be logged on to link his meetup account
       if(!req.user || provider != 'meetup') return next(new Error('Neither a username nor email was available'));
     }
 
